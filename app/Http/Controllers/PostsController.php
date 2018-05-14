@@ -8,6 +8,8 @@ use Session;
 
 class PostsController extends Controller
 {
+    // Pagination limit
+    const LIMIT = 10;
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +17,7 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::latest()->get();
+        $posts = Post::latest()->paginate(self::LIMIT);
         return view('backend.posts.index', compact('posts'));
     }
 
