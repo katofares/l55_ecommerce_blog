@@ -63,6 +63,7 @@
     <!-- PAGE CONTENT -->
         <div class="content-wrapper">
             <div class="content">
+                @include('backend.flash-messages')
                 @yield('content')
             </div>
         </div>

@@ -16,12 +16,11 @@
             </li>
 
             <li>
-                <a href="index.html"><i class="fa fa-pencil"></i> <span>List</span></a>
+                <a href="index.html"><i class="fa fa-pencil"></i> <span>Posts</span></a>
                 <ul>
-                    <li><a href="#">Item 01</a></li>
-                    <li><a href="#">Item 01</a></li>
-                    <li><a href="#">Item 01</a></li>
-                    <li><a href="#">Item 01</a></li>
+                    <li><a href="{{ route('admin.posts.index') }}">All posts</a></li>
+                    <li><a href="{{ route('admin.posts.create') }}">Create post</a></li>
+                    <li><a href="{{ route('admin.posts.trash') }}">Trashed posts</a></li>
                 </ul>
             </li>
 
