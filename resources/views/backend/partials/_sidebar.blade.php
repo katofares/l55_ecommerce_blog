@@ -7,7 +7,7 @@
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-home"></i> <span>Dashboard</span></a>
+                <a href="{{ route('dashboard') }}"><i class="fa fa-home"></i> <span>Dashboard</span></a>
             </li>
 
             <li class="navigation-header">
