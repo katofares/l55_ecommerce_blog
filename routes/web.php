@@ -24,9 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
  */
 Route::group(['prefix' => 'admin'], function () {
     // DASHBOARD
-    Route::get('/dashboard', function () {
-        return view('backend.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', 'AdminController@index')->name('dashboard');
 
     // POSTS
     Route::get('/posts/trash', 'PostsController@trash')->name('admin.posts.trash');

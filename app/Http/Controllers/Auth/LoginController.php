@@ -37,10 +37,10 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if(auth()->user()->id == 1){
+        if(auth()->user()->role->id == 1){
             return redirect()->route('dashboard');
         } else {
-            return redirect()->route('notAdmin');
+            return redirect()->route('home');
         }
     }
 
