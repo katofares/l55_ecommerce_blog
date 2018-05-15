@@ -17,4 +17,13 @@ class Post extends Model
     // Mass Assignment
     protected $fillable = ['title', 'body'];
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * Relation with categories table
+     */
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
 }

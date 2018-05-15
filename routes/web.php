@@ -34,5 +34,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/posts/{post}/restore', 'PostsController@restore')->name('admin.posts.restore');
     Route::resource('/posts', 'PostsController')->names('admin.posts');
 
+    // CATEGORIES
+    Route::resource('/categories', 'CategoryController')->names('admin.categories');
+
 });
 

@@ -24,6 +24,20 @@
                 </ul>
             </li>
 
+            <li class="navigation-header">
+                <span>Categories</span>
+                <i class="icon-menu"></i>
+            </li>
+
+            <li>
+                <a href="index.html"><i class="fa fa-pencil"></i> <span>Categories</span></a>
+                <ul>
+                    <li><a href="{{ route('admin.categories.index') }}">All Categories</a></li>
+                    <li><a href="{{ route('admin.categories.create') }}">Create Category</a></li>
+                </ul>
+            </li>
+
+
         </ul>
     </div>
 </div>
