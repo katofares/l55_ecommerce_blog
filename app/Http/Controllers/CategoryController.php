@@ -89,9 +89,17 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $cleaned_data = $request->validate([
+            'name' => 'required|unique:categories|max:255|min:3',
+        ]);
+        // create slu from the title
+        $cleaned_data['slug'] = str_slug($cleaned_data['name']);
 
-        dd($request->all());
+        if($category->update($cleaned_data)){
+            return redirect()->route('admin.categories.index')->with('success', 'Category created successfully');
+        } else {
+            return redirect()->back();
+        }
     }
 
     /**
